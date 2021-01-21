@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        OLYMPIC LOGO
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <style>
+        body { 
+          background-image: url('https://i.pinimg.com/originals/68/a6/98/68a69816b38e12e4158ed3aa889bc12f.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-position: center; 
+        }
+        </style>
+</head>
+<body>
+    <h1 id="head">
+        OLYMPIC LOGO
+    </h1>
+    <canvas id="myCanvas" width="800" height="600" style="padding-left: 200px;"></canvas>
+    <script>
+        var canvas = document.getElementById('myCanvas');
+        ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.strokeStyle ="red";
+        ctx.lineWidth =3;
+        ctx.rect(250,150,400,250);
+        ctx.stroke();
+
+        var colors = ['blue','yellow','black','green','red'];
+        var strartptx = [350,380,410,440,470]
+        var strartpty = [210,260,210,260,210]
+        for(i=0;i<6;i++)
+        {
+            ctx.beginPath();
+            ctx.strokeStyle=colors[i];
+            ctx.lineWidth =5;
+            ctx.arc(strartptx[i],strartpty[i],40,0,2*Math.PI);
+            ctx.stroke();
+        }
+    </script>
+</body>
